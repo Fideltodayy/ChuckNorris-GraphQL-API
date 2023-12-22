@@ -11,15 +11,15 @@ This server wraps the ChuckNorris.io API with a GraphQL interface, providing que
 ## Setup Instructions
 
 1. **Clone the Repository:**
-```git clone <https://github.com/Fideltodayy/ChuckNorris-GraphQL-API/tree/2561316a67e2a5813bec80fc575354eba06b4367/chucknorris-graphql-server>
-```
+git clone <https://github.com/Fideltodayy/ChuckNorris-GraphQL-API/tree/2561316a67e2a5813bec80fc575354eba06b4367/chucknorris-graphql-server>
+
 2. **Navigate to the Server Folder:**
 
-```cd chucknorris-graphql-server```
+```cd chucknorris-graphql-server```.
 
 3. **Install Dependencies:**
 
-```npm install```
+```npm install```.
 4. **Run the Server:**
 
 ```node index.js```
