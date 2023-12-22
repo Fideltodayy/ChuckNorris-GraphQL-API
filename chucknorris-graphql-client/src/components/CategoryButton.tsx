@@ -22,7 +22,7 @@ const CategoryButton: React.FC<CategoryButtonProps> = ({ category }) => {
   };
 
   return (
-    <button onClick={handleClick}>{category}</button>
+    <button onClick={handleClick} className='category-button'>{category}</button>
   );
 };
 

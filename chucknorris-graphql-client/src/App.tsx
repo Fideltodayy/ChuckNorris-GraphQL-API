@@ -14,6 +14,29 @@ const App: React.FC = () => {
 
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error: {error.message}</p>;
+
+
+// CustomPrevArrow.tsx
+const CustomPrevArrow: React.FC = (props) => {
+  return (
+    <div {...props} className="slick-prev custom-prev-arrow">
+      {/* Your custom icon or text for the previous button */}
+      <span>&lt;</span>
+    </div>
+  );
+};
+
+// CustomNextArrow.tsx
+const CustomNextArrow: React.FC = (props) => {
+  return (
+    <div {...props} className="slick-next custom-next-arrow">
+      {/* Your custom icon or text for the next button */}
+      <span>&gt;</span>
+    </div>
+  );
+};
+
+
   const settings = {
     dots: true,
     centerMode: true,
@@ -27,46 +50,50 @@ const App: React.FC = () => {
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-          centerPadding: "50%",
+          slidesToShow: 3, // Adjust the number of buttons for large screens
+          slidesToScroll: 3,
+          centerPadding: "50%", // Adjust padding for large screens
         },
       },
       {
         breakpoint: 768,
         settings: {
-          slidesToShow: 1,
+          slidesToShow: 2, // Display one button on small screens
           slidesToScroll: 1,
           centerPadding: "10%",
         },
       },
     ],
-    cssEase: "linear", // Add this line for smoother transitions
+    // for smoother transitions
+    cssEase: "linear",
+    prevArrow: <CustomPrevArrow />,
+    nextArrow: <CustomNextArrow />,
   };
+  
 
   return (
-    <div>
+    <div className='container'>
       <h1>Chuck Norris Jokes</h1>
       <div>
         <h2>Categories</h2>
-        <div>
+        <div className="slick-slider">
           <Slider {...settings}>
-          {data?.categories?.map((category: string) => (
-            <div key={category} >
-              <CategoryButton category={category} />
-            </div>
-          ))}
+            {data?.categories?.map((category: string) => (
+              <div key={category}>
+                <CategoryButton category={category} />
+              </div>
+            ))}
           </Slider>
         </div>
       </div>
-      <div>
-        <h2>Random Joke</h2>
-        {state.currentJoke ? (
-          <p>{state.currentJoke.value}</p>
-        ) : (
-          <p>Select a category to see a random joke</p>
-        )}
-      </div>
+      <div className="random-joke">
+      <h2>Random Joke</h2>
+      {state.currentJoke ? (
+        <p>{state.currentJoke.value}</p>
+      ) : (
+        <p>Select a category to see a random joke</p>
+      )}
+    </div>
     </div>
   );
 };

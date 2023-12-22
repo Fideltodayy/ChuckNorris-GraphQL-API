@@ -21,7 +21,6 @@ h2 {
   color: #555;
 }
 
-/* styles.css */
 .category-button {
   background-color: #3498db;
   color: #fff;
@@ -37,7 +36,34 @@ h2 {
   background-color: #2980b9;
 }
 
+.slick-slider {
+  width: 100%;
+  margin: 20px 0;
+}
 
-p {
-  color: #777;
+.slick-prev, .slick-next {
+  font-size: 36px;
+  border-width: 20px;
+  color: #333;
+
+}
+
+.slick-prev:hover, .slick-next:hover {
+  color: #3498db;
+}
+
+
+.random-joke {
+  margin-top: 20px;
+}
+
+/* styles.css */
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 10px;
+  }
+
+  .slick-slider {
+    margin: 10px 0;
+  }
 }
