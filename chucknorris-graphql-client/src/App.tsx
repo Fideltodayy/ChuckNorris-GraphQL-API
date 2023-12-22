@@ -21,7 +21,7 @@ const CustomPrevArrow: React.FC = (props) => {
   return (
     <div {...props} className="slick-prev custom-prev-arrow">
       {/* Your custom icon or text for the previous button */}
-      <span>&lt;</span>
+      <span></span>
     </div>
   );
 };
@@ -31,7 +31,7 @@ const CustomNextArrow: React.FC = (props) => {
   return (
     <div {...props} className="slick-next custom-next-arrow">
       {/* Your custom icon or text for the next button */}
-      <span>&gt;</span>
+      <span></span>
     </div>
   );
 };
@@ -68,6 +68,12 @@ const CustomNextArrow: React.FC = (props) => {
     cssEase: "linear",
     prevArrow: <CustomPrevArrow />,
     nextArrow: <CustomNextArrow />,
+    appendDots: (dots: any) => (
+      <div className="append-dots">
+        {/* Append dots to the div with classname "append-dots" */}
+        <ul style={{ margin: '0' }}> {dots} </ul>
+      </div>
+    ),
   };
   
 
@@ -84,15 +90,18 @@ const CustomNextArrow: React.FC = (props) => {
               </div>
             ))}
           </Slider>
+          <div className='append-dots'>
+
+          </div>
         </div>
       </div>
       <div className="random-joke">
-      <h2>Random Joke</h2>
-      {state.currentJoke ? (
-        <p>{state.currentJoke.value}</p>
-      ) : (
-        <p>Select a category to see a random joke</p>
-      )}
+        <h2>Random Joke</h2>
+        {state.currentJoke ? (
+          <p>{state.currentJoke.value}</p>
+        ) : (
+          <p>Select a category to see a random joke</p>
+        )}
     </div>
     </div>
   );

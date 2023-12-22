@@ -4,7 +4,7 @@ body {
   font-family: 'Arial', sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f5f5f5;
+  background-color: #59b80028;
 }
 
 .container {
@@ -15,10 +15,13 @@ body {
 
 h1 {
   color: #333;
+  text-align: center;
+  font-size: 50px;
 }
 
 h2 {
   color: #555;
+  font-size: xx-large;
 }
 
 .category-button {
@@ -41,20 +44,30 @@ h2 {
   margin: 20px 0;
 }
 
-.slick-prev, .slick-next {
-  font-size: 36px;
-  border-width: 20px;
-  color: #333;
-
+/* Add this CSS in your global styles or App.css file */
+.slick-prev,
+.slick-next {
+  font-size: 24px; /* Adjust the font size as needed */
+  color: #fff; /* Change the color as needed */
+  background-color: #007bff; /* Change the background color as needed */
+  border-radius: 50%; /* Make it circular */
 }
 
-.slick-prev:hover, .slick-next:hover {
-  color: #3498db;
+.slick-prev {
+  left: -30px; /* Adjust the distance from the left */
 }
+
+.slick-next {
+  right: -30px; /* Adjust the distance from the right */
+}
+
 
 
 .random-joke {
   margin-top: 20px;
+  border: black solid 1px;
+  text-align: center;
+  
 }
 
 /* styles.css */
@@ -65,5 +78,29 @@ h2 {
 
   .slick-slider {
     margin: 10px 0;
+    margin-bottom: 40px;
   }
+  .slick-prev {
+    left: 10px; /* Adjust the distance from the left */
+  }
+  
+  .slick-next {
+    right: 10px; /* Adjust the distance from the right */
+  }
+  h1 {
+  color: #333;
+  text-align: center;
+  font-size: xx-large;
+  font-weight: bolder;
+  }
+  h2{
+    font-size: x-large;
+  }
+}
+
+p {
+  color: #333;
+  font-size: 18px;
+  line-height: 1.5;
+  font-family: monospace;
 }
