@@ -1,6 +1,6 @@
-# Chuck Norris Jokes App 🤣
+# [Chuck Norris Jokes App] (https://fidel-chucknorris-jokes.vercel.app/) 🤣
 
-Welcome to the Chuck Norris Jokes App, where laughter meets technology! 🚀
+Welcome to the [Chuck Norris](https://fidel-chucknorris-jokes.vercel.app/) Jokes App, where laughter meets technology! 🚀
 
 ## Overview
 
@@ -30,7 +30,7 @@ This app is powered by the latest technologies in web development:
     
     bashCopy code
     
-    `git clone https://github.com/Fideltodayy/ChuckNorris-GraphQL-API/tree/main` 
+    `git clone https://github.com/Fideltodayy/ChuckNorris-GraphQL-API` 
     
 2.  **Install Dependencies:**
     
