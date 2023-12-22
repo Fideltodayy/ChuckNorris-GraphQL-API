@@ -1,7 +1,7 @@
 # [Chuck Norris Jokes App]🤣
 
 Welcome to the [Chuck Norris](https://fidel-chucknorris-jokes.vercel.app/) Jokes App, where laughter meets technology! 🚀
-
+You can view it live [here](https://fidel-chucknorris-jokes.vercel.app/)
 ## Overview
 
 This delightful web application fetches Chuck Norris jokes from the ChuckNorris.io API and presents them in a fun and interactive manner. With a sleek and responsive design, users can enjoy a good laugh on any device.
