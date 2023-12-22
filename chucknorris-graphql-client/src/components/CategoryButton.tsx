@@ -1,39 +1,28 @@
-// src/CategoryButton.tsx
+// src/components/CategoryButton.tsx
 import React from 'react';
+import { useChuckNorrisContext } from '../context/ChuckNorrisContext';
 import { useQuery } from '@apollo/client';
 import { GET_RANDOM_JOKE, GetRandomJokeData } from '../graphql/queries';
 
 interface CategoryButtonProps {
   category: string;
-  selectedCategory: string | null;
-  onSelectCategory: (category: string | null) => void;
 }
 
-const CategoryButton: React.FC<CategoryButtonProps> = ({ category, selectedCategory, onSelectCategory }) => {
-  const { loading, error, data } = useQuery<GetRandomJokeData>(GET_RANDOM_JOKE, {
-    variables: { category: selectedCategory || category },
+const CategoryButton: React.FC<CategoryButtonProps> = ({ category }) => {
+  const { dispatch } = useChuckNorrisContext();
+  const { data } = useQuery<GetRandomJokeData>(GET_RANDOM_JOKE, {
+    variables: { category },
   });
 
-  const handleCategoryClick = () => {
-    onSelectCategory(category);
+  const handleClick = () => {
+    // Dispatch action to set the selected category in the context
+    dispatch({ type: 'SET_CATEGORY', payload: category });
+    // Dispatch action to set the current joke in the context
+    dispatch({ type: 'SET_JOKE', payload: data?.randomJoke });
   };
 
-  if (loading) return <p>Loading...</p>;
-  if (error) return <p>Error: {error.message}</p>;
-
-  const { icon_url, value } = data?.randomJoke || {};
-
   return (
-    <div>
-      <h3>{category}</h3>
-      <button onClick={handleCategoryClick}>Get Joke</button>
-      {selectedCategory === category && (
-        <>
-          <img src={icon_url} alt="Chuck Norris" />
-          <p>{value}</p>
-        </>
-      )}
-    </div>
+    <button onClick={handleClick}>{category}</button>
   );
 };
 

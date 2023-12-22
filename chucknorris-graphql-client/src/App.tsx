@@ -1,11 +1,13 @@
 // src/App.tsx
-import React, { useState } from 'react';
+import React from 'react';
 import { useQuery } from '@apollo/client';
 import { GET_CATEGORIES, GetCategoriesData } from './graphql/queries';
 import CategoryButton from './components/CategoryButton';
+import { useChuckNorrisContext } from './context/ChuckNorrisContext';
+
 const App: React.FC = () => {
   const { loading, error, data } = useQuery<GetCategoriesData>(GET_CATEGORIES);
-  const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
+  const { state } = useChuckNorrisContext();
 
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error: {error.message}</p>;
@@ -18,14 +20,18 @@ const App: React.FC = () => {
         <ul>
           {data?.categories?.map((category: string) => (
             <li key={category}>
-              <CategoryButton
-                category={category}
-                selectedCategory={selectedCategory}
-                onSelectCategory={setSelectedCategory}
-              />
+              <CategoryButton category={category} />
             </li>
           ))}
         </ul>
+      </div>
+      <div>
+        <h2>Random Joke</h2>
+        {state.currentJoke ? (
+          <p>{state.currentJoke.value}</p>
+        ) : (
+          <p>Select a category to see a random joke</p>
+        )}
       </div>
     </div>
   );
