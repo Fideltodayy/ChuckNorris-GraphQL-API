@@ -30,7 +30,7 @@ This app is powered by the latest technologies in web development:
     
     bashCopy code
     
-    `git clone [repository-url]` 
+    `git clone https://github.com/Fideltodayy/ChuckNorris-GraphQL-API/tree/main` 
     
 2.  **Install Dependencies:**
     
