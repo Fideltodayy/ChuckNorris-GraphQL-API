@@ -38,7 +38,6 @@ const CustomNextArrow: React.FC = (props) => {
 
 
   const settings = {
-    dots: true,
     centerMode: true,
     infinite: true,
     centerPadding: "35%",

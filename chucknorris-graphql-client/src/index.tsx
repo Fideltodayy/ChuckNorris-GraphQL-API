@@ -6,7 +6,7 @@ import reportWebVitals from "./reportWebVitals";
 import { ApolloProvider, ApolloClient, InMemoryCache } from "@apollo/client";
 import { ChuckNorrisProvider } from "./context/ChuckNorrisContext";
 const client = new ApolloClient({
-  uri: "http://localhost:4000/graphql",
+  uri: "https://fidel-chucknorris-jokes.onrender.com",
   cache: new InMemoryCache(),
 });
 
