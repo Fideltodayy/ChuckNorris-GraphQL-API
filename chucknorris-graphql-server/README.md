@@ -15,11 +15,15 @@ git clone <https://github.com/Fideltodayy/ChuckNorris-GraphQL-API/tree/2561316a6
 
 2. **Navigate to the Server Folder:**
 
-```cd chucknorris-graphql-server```.
+```
+cd chucknorris-graphql-server
+```
 
 3. **Install Dependencies:**
 
-```npm install```.
+```
+npm install
+```
 4. **Run the Server:**
 
 ```node index.js```
