@@ -20,7 +20,6 @@ const App: React.FC = () => {
 const CustomPrevArrow: React.FC = (props) => {
   return (
     <div {...props} className="slick-prev custom-prev-arrow">
-      {/* Your custom icon or text for the previous button */}
       <span></span>
     </div>
   );
@@ -30,7 +29,6 @@ const CustomPrevArrow: React.FC = (props) => {
 const CustomNextArrow: React.FC = (props) => {
   return (
     <div {...props} className="slick-next custom-next-arrow">
-      {/* Your custom icon or text for the next button */}
       <span></span>
     </div>
   );
