@@ -11,7 +11,7 @@ This server wraps the ChuckNorris.io API with a GraphQL interface, providing que
 ## Setup Instructions
 
 1. **Clone the Repository:**
-git clone <https://github.com/Fideltodayy/ChuckNorris-GraphQL-API/tree/2561316a67e2a5813bec80fc575354eba06b4367/chucknorris-graphql-server>
+git clone <https://github.com/Fideltodayy/ChuckNorris-GraphQL-API/tree/main>
 
 2. **Navigate to the Server Folder:**
 
@@ -26,18 +26,22 @@ npm install
 ```
 4. **Run the Server:**
 
-```node index.js```
+```
+node index.js
+```
 This will start the Apollo Server at http://localhost:4000. The server will provide a GraphQL Playground for testing queries.
 
 ## GraphQL Queries
 ### Fetch All Categories
 
-```query {
+```
+query {
   categories
 }
 ```
 ### Fetch a Random Joke by Category
-```query GetRandomJoke($category: String){
+```
+query GetRandomJoke($category: String){
   randomJoke ( category: $category){
     icon_url,
     id,
