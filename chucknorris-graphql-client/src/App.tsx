@@ -1,7 +1,7 @@
 // src/App.tsx
 import React, { useState } from 'react';
 import { useQuery } from '@apollo/client';
-import { GET_CATEGORIES, GetCategoriesData } from './graphql';
+import { GET_CATEGORIES, GetCategoriesData } from './graphql/queries';
 import CategoryButton from './components/CategoryButton';
 const App: React.FC = () => {
   const { loading, error, data } = useQuery<GetCategoriesData>(GET_CATEGORIES);

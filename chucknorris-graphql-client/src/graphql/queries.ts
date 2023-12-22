@@ -1,4 +1,4 @@
-// src/graphql.ts
+// src/queries.ts
 import { gql } from '@apollo/client';
 
 interface GetCategoriesData {

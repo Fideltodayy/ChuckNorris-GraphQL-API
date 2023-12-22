@@ -1,7 +1,7 @@
 // src/CategoryButton.tsx
 import React from 'react';
 import { useQuery } from '@apollo/client';
-import { GET_RANDOM_JOKE, GetRandomJokeData } from '../graphql';
+import { GET_RANDOM_JOKE, GetRandomJokeData } from '../graphql/queries';
 
 interface CategoryButtonProps {
   category: string;
