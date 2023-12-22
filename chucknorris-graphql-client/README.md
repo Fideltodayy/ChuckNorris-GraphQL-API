@@ -34,6 +34,8 @@ npm start
 This will start the Apollo Server at http://localhost:4000. The server will provide a GraphQL Playground for testing queries.
 
 ## GraphQL Queries
+`queries.ts`: Contains GraphQL queries for fetching categories and random jokes.
+
 ### Fetch All Categories
 
 ```
