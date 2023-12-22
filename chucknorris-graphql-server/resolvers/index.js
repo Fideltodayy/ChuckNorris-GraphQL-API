@@ -1,5 +1,3 @@
-
-
 // Import axios to make the HTTP requests
 import axios from 'axios';
 // Define the url to be used wehich is the ChuckNorris.io API URL
