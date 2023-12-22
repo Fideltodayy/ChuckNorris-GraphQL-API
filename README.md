@@ -1,4 +1,4 @@
-# [Chuck Norris Jokes App]🤣
+# Chuck Norris Jokes App🤣
 
 Welcome to the [Chuck Norris](https://fidel-chucknorris-jokes.vercel.app/) Jokes App, where laughter meets technology! 🚀
 You can view it live [here](https://fidel-chucknorris-jokes.vercel.app/)
